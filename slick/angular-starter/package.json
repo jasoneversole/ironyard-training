@@ -1,0 +1,38 @@
+{
+  "name": "angular-starter",
+  "version": "1.0.0",
+  "description": "A nice little starter project for learning angular.",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-resource": "^1.6.1",
+    "@uirouter/angularjs": "latest",
+    "purecss": "^0.6.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.1",
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0"
+  },
+  "scripts": {
+    "prestart": "node ./node_modules/gulp/bin/gulp serve:prepare",
+    "start": "node ./node_modules/gulp/bin/gulp serve",
+    "pretest": "node ./node_modules/gulp/bin/gulp test:prepare",
+    "test": "node ./node_modules/karma/bin/karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiy-curtissimo/angular-starter.git"
+  },
+  "author": "Curtis Schlak <curtis.schlak@theironyard.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiy-curtissimo/angular-starter/issues"
+  },
+  "homepage": "https://github.com/tiy-curtissimo/angular-starter#readme"
+}

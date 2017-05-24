@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <title>Starter Page</title>
+  <link rel="stylesheet" href="pure-0.6.2.min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD"
+    crossorigin="anonymous">
+  <style>
+    header,
+    main {
+      max-width: 768px;
+      margin: auto;
+      margin-top: 4em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+  </header>
+
+  <main>
+    <a ui-sref="home">Go Home</a>
+    <a ui-sref="notHome">Go Away!</a>
+
+    <ui-view></ui-view>
+  </main>
+
+  <script src="angular-1.6.4.min.js"></script>
+  <script src="angular-resource-1.6.4.min.js"></script>
+  <script src="angular-ui-router-1.0.3.min.js"></script>
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+  <script src="home/home.component.js"></script>
+</body>
+
+</html>
