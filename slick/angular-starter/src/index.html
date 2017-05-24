@@ -21,18 +21,19 @@
   </header>
 
   <main>
-    <a ui-sref="home">Go Home</a>
-    <a ui-sref="notHome">Go Away!</a>
+    <a ui-sref="login">login</a>
 
-    <ui-view></ui-view>
+    <div ui-view=""></div>
   </main>
 
+  <script src="http://localhost:5000/socket.io/socket.io.js"></script>
   <script src="angular-1.6.4.min.js"></script>
   <script src="angular-resource-1.6.4.min.js"></script>
-  <script src="angular-ui-router-1.0.3.min.js"></script>
   <script src="app.module.js"></script>
   <script src="app.config.js"></script>
-  <script src="home/home.component.js"></script>
+  <script src="chat-data/chat-data.service.js"></script>
+  <script src="angular-ui-router-1.0.3.min.js"></script>
+  <script src="login/login.component.js"></script>
 </body>
-
 </html>
+

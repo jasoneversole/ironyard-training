@@ -3,19 +3,21 @@
     .module('app')
     .config(function ($stateProvider) {
 
-      const home = {
-        url: '/home',
-        name: 'home',
-        component: 'home'
+      const login = {
+        url: '/login',
+        name: 'login',
+        component: 'login'
+//        resolve: {
+//          ip: ['jsonData', jsonData => jsonData.getIp()],
+//          now: ['jsonData', jsonData => jsonData.getNow()],
+//        },
+//        views: {
+//          left: 'home',
+//          '': 'home2'
+//        }
       };
 
-      const notHome = {
-        url: '/not-home',
-        name: 'notHome',
-        template: '<h1 style="color: red">Not home</h1>'
-      };
+      $stateProvider.state(login);
 
-      $stateProvider.state(home);
-      $stateProvider.state(notHome);
     });
 }());
