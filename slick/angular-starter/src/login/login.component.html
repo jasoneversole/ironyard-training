@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<div ng-repeat="message in login.messages | reverse" class="w3-card w3-container w3-margin-top w3-margin-bottom">
+<div ng-repeat="message in login.chatData.messages | reverse" class="w3-card w3-container w3-margin-top w3-margin-bottom">
   <h6><strong>{{message.name}}</strong></h6>
-  <h3>{{message.msg.msg}}</h3>
+  <h3>{{message.msg}}</h3>
 </div>

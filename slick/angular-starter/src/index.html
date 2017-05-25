@@ -2,7 +2,7 @@
 <html ng-app="app">
 
 <head>
-  <title>Slicket than Slack</title>
+  <title>Slicker than Slack</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="w3.css">
@@ -14,20 +14,29 @@
       top: 0;
       width: 100%;
     }
+
+    .halfsize {
+      -moz-transform: scale(0.5);
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      text-align: center;
+    }
   </style>
 </head>
 
 <body>
   <header class="w3-container w3-theme w3-padding w3-blue">
     <div class="w3-center">
-      <h3 class="w3-xlarge">Slicker Than Slack</h3>
+      <img class="halfsize" src="https://s3.us-east-2.amazonaws.com/slickerthanslack.com/Slick+Logo.png"></img>
+      <h6 class="w3-large">BETA VERSION</h6>
     </div>
   </header>
 
   <div ui-view="top"></div>
 
   <script src="lodash.js"></script>
-  <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+  <!--<script src="http://localhost:5000/socket.io/socket.io.js"></script>-->
+  <script src="http://nsmc.curtissimo.com:9000/socket.io/socket.io.js"></script>
   <script src="angular-1.6.4.min.js"></script>
   <script src="angular-resource-1.6.4.min.js"></script>
   <script src="app.module.js"></script>
