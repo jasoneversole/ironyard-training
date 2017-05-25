@@ -7,14 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="w3.css">
   <style>
-    .navbar {
-      overflow: hidden;
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-
     .halfsize {
       -moz-transform: scale(0.5);
       -webkit-transform: scale(0.5);
@@ -34,15 +26,17 @@
 
   <div ui-view="top"></div>
 
-  <script src="lodash.js"></script>
   <!--<script src="http://localhost:5000/socket.io/socket.io.js"></script>-->
   <script src="http://nsmc.curtissimo.com:9000/socket.io/socket.io.js"></script>
+
+  <script src="lodash.js"></script>
   <script src="angular-1.6.4.min.js"></script>
   <script src="angular-resource-1.6.4.min.js"></script>
+  <script src="angular-ui-router-1.0.3.min.js"></script>
+
   <script src="app.module.js"></script>
   <script src="app.config.js"></script>
   <script src="chat-data/chat-data.service.js"></script>
-  <script src="angular-ui-router-1.0.3.min.js"></script>
   <script src="login/login.component.js"></script>
 </body>
 

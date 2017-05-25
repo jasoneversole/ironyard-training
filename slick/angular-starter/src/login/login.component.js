@@ -4,7 +4,6 @@
     constructor(chatData, $scope) {
       this.loggedIn = false;
       this.chatData = chatData;
-      this.$scope = $scope;
     }
 
     sendMessage() {
@@ -33,7 +32,7 @@
   angular
     .module('app')
     .component('login', {
-      controller: ['chatData', '$scope', (chatData, $scope) => new LoginController(chatData, $scope)],
+      controller: ['chatData' , (chatData) => new LoginController(chatData)],
       templateUrl: 'login/login.component.html',
       controllerAs: 'login'
     });
