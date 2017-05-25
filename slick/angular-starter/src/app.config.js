@@ -1,23 +1,26 @@
 (function () {
   angular
     .module('app')
-    .config(function ($stateProvider) {
-
-      const login = {
-        url: '/login',
-        name: 'login',
-        component: 'login'
-//        resolve: {
-//          ip: ['jsonData', jsonData => jsonData.getIp()],
-//          now: ['jsonData', jsonData => jsonData.getNow()],
-//        },
-//        views: {
-//          left: 'home',
-//          '': 'home2'
-//        }
+    .filter('reverse', function () {
+      return function (items) {
+        return items.slice().reverse();
       };
+    })
+    .config(function ($stateProvider, $urlRouterProvider) {
 
-      $stateProvider.state(login);
+    const login = {
+      url: '/main',
+      name: 'main',
+      //    resolve: {
+      //      chatName: ['chatData', chatData => chatData.chatName],
+      //   },
+      views: {
+        top: 'login'
+      }
+    };
 
-    });
+    $stateProvider.state(login);
+    $urlRouterProvider.otherwise('/main');
+
+  });
 }());

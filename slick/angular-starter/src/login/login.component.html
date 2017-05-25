@@ -1,4 +1,41 @@
-<div>
-  <input ng-model="login.name" type="text" id="loginName" />
+<!--<div ng-hide="login.loggedIn">
+  <input ng-model="login.name" type="text" id="loginName" /><br/>
   <button ng-click="login.nameUser()" class="pure-button">Login</button>
+</div>
+<div ng-show="login.loggedIn">
+  <h3>Welcome {{login.name}} ({{login.id}})</h3>
+  <input ng-model="login.message" type="text" id="message" />
+  <button ng-click="login.sendMessage()" class="pure-button">Send</button>
+</div>
+<div>
+  <div ng-repeat="message in login.messages">
+    x{{message.msg.msg}}
+  </div>
+</div>
+-->
+
+
+<div ng-hide="login.loggedIn" class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+  <div class="w3-bar w3-container" style="width:400px">
+    <h3>Please Sign In</h3>
+
+    <div class="w3-left-align w3-small w3-opacity">name</div>
+    <input ng-keypress="login.loginKeypress($event)"ng-model="login.name" class="w3-input w3-border" type="text" autocorrect="off" autocapitalize="none"></br>
+
+    <button ng-click="login.nameUser()" class="w3-btn w3-largew 3-padding-large w3-blue" style="width:100%">Sign In</button><br/>
+  </div>
+</div>
+
+<div ng-show="login.loggedIn" class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+  <div class="w3-bar w3-container" style="width:400px">
+    <h3>Welcome {{login.name}}</h3>
+    <div class="w3-left-align w3-small w3-opacity">Enter Message</div>
+    <input ng-keypress="login.messageKeypress($event)" ng-model="login.message" class="w3-input w3-border" type="text" autocorrect="off" autocapitalize="none"></br>
+    <button ng-click="login.sendMessage()" class="w3-btn w3-largew 3-padding-large w3-blue" style="width:100%">Send Message</button><br/>
+  </div>
+</div>
+
+<div ng-repeat="message in login.messages | reverse" class="w3-card w3-container w3-margin-top w3-margin-bottom">
+  <h6><strong>{{message.name}}</strong></h6>
+  <h3>{{message.msg.msg}}</h3>
 </div>

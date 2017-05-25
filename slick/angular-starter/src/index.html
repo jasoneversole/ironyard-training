@@ -1,31 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ng-app="app">
 
 <head>
-  <meta charset="utf-8">
-  <title>Starter Page</title>
-  <link rel="stylesheet" href="pure-0.6.2.min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD"
-    crossorigin="anonymous">
+  <title>Slicket than Slack</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="w3.css">
   <style>
-    header,
-    main {
-      max-width: 768px;
-      margin: auto;
-      margin-top: 4em;
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
-  <header>
+  <header class="w3-container w3-theme w3-padding w3-blue">
+    <div class="w3-center">
+      <h3 class="w3-xlarge">Slicker Than Slack</h3>
+    </div>
   </header>
 
-  <main>
-    <a ui-sref="login">login</a>
+  <div ui-view="top"></div>
 
-    <div ui-view=""></div>
-  </main>
-
+  <script src="lodash.js"></script>
   <script src="http://localhost:5000/socket.io/socket.io.js"></script>
   <script src="angular-1.6.4.min.js"></script>
   <script src="angular-resource-1.6.4.min.js"></script>
@@ -35,5 +36,5 @@
   <script src="angular-ui-router-1.0.3.min.js"></script>
   <script src="login/login.component.js"></script>
 </body>
-</html>
 
+</html>
