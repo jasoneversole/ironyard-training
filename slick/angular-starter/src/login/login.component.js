@@ -1,7 +1,7 @@
 (function () {
 
   class LoginController {
-    constructor(chatData) {
+    constructor(chatData, $scope) {
       this.names = [];
       this.messages = [];
       this.message = '';
@@ -9,6 +9,7 @@
       this.chatData = chatData;
       this.chatData.socket.on('user named', ({ id, name }) => this.addUser(id, name));
       this.chatData.socket.on('chat message', ({ id, msg }) => this.addMessage(id, msg));
+      this.$scope = $scope;
     }
 
     sendMessage() {
@@ -23,6 +24,7 @@
     addMessage(id, msg) {
       const name = this.getUserName(id);
       this.messages.push({ id, msg, name });
+      this.$scope.$apply();
     }
 
     getUserName(id) {
@@ -50,7 +52,7 @@
   angular
     .module('app')
     .component('login', {
-      controller: ['chatData', chatData => new LoginController(chatData)],
+      controller: ['chatData', '$scope', (chatData, $scope) => new LoginController(chatData, $scope)],
       templateUrl: 'login/login.component.html',
       controllerAs: 'login'
     });
