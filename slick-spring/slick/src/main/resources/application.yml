@@ -1,0 +1,19 @@
+security:
+  user:
+    name: slick
+    password: slick
+    
+server:
+  port: 5000
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/slick
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  mustache:
+    expose-request-attributes: true
+    
