@@ -1,0 +1,8 @@
+<h1>
+  {{title}}
+</h1>
+
+<select [(ngModel)]="selectedObject">
+  <option *ngFor="let c of objArray" [ngValue]="c">{{c.firstName}} {{c.lastName}}</option>
+</select>
+  
